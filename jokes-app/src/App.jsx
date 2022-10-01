@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+
 import './App.css'
+import Jokes from './components/Jokes'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div >
+        <div className='jokes'>
+          <Jokes 
+          setup='I got my daughter a fridge for her birthday.'
+          punchline="I can't wait to see her face light up when she opens it."
+          />
+        </div>
+          
+        <div className='jokes'>
+          <Jokes 
+            setup='How did the hacker escape the police?'
+            punchline='He just ransomware!'
+          />
+        </div>
+        
+        <div className='jokes'>
+          <Jokes 
+            setup="Why don't pirates travel on mountain roads?"
+            punchline='Scurvy.'
+          />
+        </div>
+        
+        <div className='jokes'>
+          <Jokes 
+            setup='Why do bees stay in the hive in the winter?'
+            punchline='Swarm.'
+          />
+        </div>
+        
+        <div className='jokes'>
+          <Jokes 
+            setup="What's the best thing about Switzerland?"
+            punchline="I don't know, but the flag is a big plus!"
+          />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+  );
 }
-
-export default App
